@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyn's Recipe Calendar</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <div class="justify-between flex p-4 bg-yellow-200 top-0 sticky items-center">
+        <h1 class="text-3xl font-bold text-gray-600">Lyn's Recipe Calendar</h1>
+        <div>
+            <button class="text-2xl" id="calendar">
+                🗓️
+            </button>
+        </div>
+    </div>
+
+    <div id="calendarModal" class="fixed inset-0 flex items-center justify-center bg-opacity-50 hidden">
+        <div class="bg-white p-6 rounded shadow-lg">
+            <button id="closeModal" class="text-gray-500 text-xl mb-4 focus:outline-none">&times;Select</button>
+            <input type="date" id="calendarInput" class="border p-2 rounded w-full" placeholder="Select a date">
+        </div>
+    </div>
+    <main>
+        <div class="bg-gray-100">
+            <div class="items-center text-center flex flex-col space-y-4 ">
+                <div class="bg-gray-200 opacity-75">
+                <h3 class="text-xl text-gray-600 font-semibold">Hello! Welcome to Lyn's Recipe Calendar. <br>
+                    To search for recipes kindly input your choice below. <br>
+                    For any quereies kindly contact us using the information below.
+                </h3>
+                </div>
+                <label class="font-semibold" for="Search">Search:</label>
+                <input  class="p-2" type="text" id="searchText" placeholder="Search">
+
+                <label class="font-semibold" for="Date">Date:</label>
+                <input  class="p-2" type="date" id="date">
+
+                <button class="shadow-lg hover:bg-teal-100 font-semibold p-2 rounded-md" id="search">Search</button>
+            </div>
+           <div class="justify-between flex">
+                <div id="my-recipe" class="grid">
+               
+                </div>
+            </div>
+            <h2 class="font-semibold underline text-xl selector:bg-gray-100">Your Recipes</h2>
+            <div id="your-recipe">
+
+            </div>
+        </div>
+    </main>
+    <footer class="bg-gray-300 p-4 grid">
+        <p class="text-red-400 text-xl">&copy; Copyright 2024</p>
+        <!-- <span>Email:</span> -->
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+</body>
+</html>
